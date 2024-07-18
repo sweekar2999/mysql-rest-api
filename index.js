@@ -1,5 +1,4 @@
-//& "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
-//password:your_password
+
 const { faker } = require('@faker-js/faker');
 const express=require("express");
 const app=express();
@@ -8,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 var methodOverride = require('method-override');
 
 var mysql      = require('mysql');
-const { randomUUID } = require('crypto');
+
 var connection = mysql.createConnection({
    host     : 'localhost',
    user     : 'root',
@@ -23,6 +22,7 @@ app.use(express.urlencoded({extended:true}));
 app.listen(port,()=>{
     console.log("app listening");
 })
+//for generating random data
 // let RandomUser=()=>{
 //     return [
 //      faker.string.uuid(),
@@ -166,7 +166,7 @@ app.delete("/users/:id",(req,res)=>{
 
 
 //    let q="INSERT INTO user(id,username,email,password) VALUES ?";
-//   let data=[1,"sweekar","sweekar103@gmail.com","abc1222"];
+//   let data=[1,"sweekar","sweekar@gmail.com","abc1222"];
 // try{
 //     connection.query(q,[data],(err,result)=>{
 //     if(err) throw err;
