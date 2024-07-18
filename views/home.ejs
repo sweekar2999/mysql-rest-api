@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No of Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #555;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>No of Users Are: <%= count %></h1>
+        <h2>Want to sign up</h2>
+        <form method="get" action="/add">
+            <button type="submit">Add User</button>
+        </form>
+    </div>
+</body>
+</html>
